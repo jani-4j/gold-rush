@@ -1,0 +1,18 @@
+Gold Rush – Postępy w projekcie
+
+Tydzień 1: Podstawy
+Na początku zrobiłem totalne podstawy – czyli planszę 8x8 i wrzucanie na nią żetonów.
+Napisałem klasę Board, która potrafi się wyczyścić, wyświetlić planszę i pozwala wrzucać żetony w dowolne miejsce.
+Żetony były wtedy bardzo proste – po prostu obiekty z etykietą, więc gracz to "웃", a złoto to "💰︎".
+Na tym etapie wszystko było statyczne, bez ruchu – chodziło tylko o to, żeby plansza się wyświetlała i żeby dało się wrzucić żetony bez wywalenia programu.
+W sumie najważniejsze było, żeby plansza wyglądała sensownie w konsoli i żeby nie wywalało błędów.
+
+Tydzień 2: Refaktoryzacja i ruch
+W drugim tygodniu zacząłem ogarniać kod, żeby nie był taki prymitywny.
+Zrobiłem abstrakcyjną klasę Token i podklasy dla pustego pola, złota i gracza.
+Pola w klasach są teraz prywatne (bo tak jest lepiej), a gdzie trzeba – dodałem gettery.
+Gracz może się już ruszać! Dodałem enum Move (UP, DOWN, LEFT, RIGHT, NONE) i metodę w PlayerToken, która obsługuje ruch.
+Jak spróbujesz wyjść poza planszę, to leci wyjątek – nie da się wyjść w kosmos.
+Dodałem też prostą klasę do współrzędnych, żeby nie robić bałaganu.
+Kod jest trochę bardziej uporządkowany i zaczyna przypominać prawdziwą grę, a nie tylko wyświetlanie tekstu.
+Potęrzne utrapienie ide spać :>
